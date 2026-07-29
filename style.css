@@ -965,7 +965,7 @@ Footer
 
     background:#FFD700;
 
-    opacity:0.3;
+    opacity:0.2;
 
     border-radius:3px;
 
@@ -1026,47 +1026,88 @@ Footer
         height:300px;
     }
 
-}
+
 
 @media (max-width:768px){
 
+    /* Hero */
+
+    .bismillah-translation{
+        font-size:15px;
+        padding:0 15px;
+    }
+
+    .names{
+        font-size:52px;
+    }
+
+    .ampersand{
+        font-size:48px;
+    }
+
+    /* Quran Verse */
+
+    .verse{
+        padding:70px 20px;
+    }
+
+    .verse h2{
+        font-size:36px;
+        line-height:1.5;
+        margin-bottom:25px;
+    }
+
+    .verse h3{
+        font-size:24px;
+        line-height:2;
+    }
+
+    .translation{
+        font-size:16px;
+        line-height:1.8;
+        margin:30px auto;
+    }
+
+    .reference{
+        font-size:15px;
+    }
+
+    /* Gallery */
+
     .gallery-grid{
-        
         display:flex;
-
-        flex-direction:row;
-
         justify-content:center;
-
         align-items:flex-start;
-
-        gap:5px;
-
+        gap:10px;
         flex-wrap:nowrap;
-        width:100%;
-   
-        max-width:100%;
-
-
+        padding:0 10px;
     }
 
     .gallery-img{
-
-        width:32%;
-
-        height:220px;
+        width:calc((100% - 20px)/3);
+        aspect-ratio:3/4;
+        height:auto;
         object-fit:cover;
-
         border-radius:15px;
-
     }
 
     .img2{
-
-        margin-top:40px;
-
+        margin-top:28px;
     }
 
+    /* Countdown */
 
+    .box{
+        width:80px;
+        height:80px;
+    }
+
+    .box span{
+        font-size:28px;
+    }
+
+    .box p{
+        font-size:14px;
+    }
 
 }
