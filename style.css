@@ -1,0 +1,1072 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:white;
+    overflow-x:hidden;
+    background:#081f18;
+}
+section,
+footer{
+
+    position:relative;
+
+    z-index:3;
+
+}
+.hero{
+
+    position:relative;
+    gap:12px;
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("images/background.png") center/cover no-repeat;
+
+    z-index:0;
+}
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+}
+
+.hero > *{
+    position:relative;
+    z-index:3;
+}
+.hero::before{
+    animation:zoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoom{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+
+}
+.bismillah{
+
+    font-family:'Amiri',serif;
+
+    font-size:clamp(22px,5vw,42px);
+
+    color:#FFD700;
+
+    margin-bottom:25px;
+
+    width:100%;
+
+    max-width:100%;
+
+    padding:0 10px;
+
+    text-align:center;
+
+    direction:rtl;
+
+    white-space:normal;
+
+    overflow-wrap:break-word;
+
+    line-height:1.8;
+
+}
+.bismillah-translation{
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    max-width: 600px;
+    margin: 10px auto 25px;
+    line-height: 1.6;
+    
+}
+.names{
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:clamp(60px,9vw,95px);
+
+    font-weight:700;
+
+    color:#fff;
+
+    line-height:1.1;
+
+    text-shadow:
+        0 0 10px rgba(255,215,0,.4),
+        0 0 30px rgba(255,215,0,.2);
+
+}
+.ampersand{
+
+    font-family:'Great Vibes', cursive;
+
+
+    font-size:70px;
+
+    color:#ffffff;
+
+    line-height:1;
+
+    margin:-10px 0;
+
+    text-shadow:
+        0 0 10px rgba(255,215,0,.4),
+        0 0 25px rgba(255,215,0,.25);
+
+}
+.invite{
+
+    max-width:700px;
+
+    margin-top:25px;
+
+    line-height:1.8;
+
+    font-size:clamp(16px,2vw,22px);
+
+}
+
+button{
+
+    margin-top:40px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    background:linear-gradient(135deg,#FFD700,#F6C343);
+
+ 
+   color:#0b3d2e;
+
+    
+font-weight:600;
+
+   
+ border-radius:50px;
+
+    transition:.35s;
+
+    color:#0b3d2e;
+
+    font-weight:600;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 8px 25px rgba(255,215,0,.3);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(255,215,0,.45);
+
+}
+/* Start hidden */
+.fade1,
+.fade2,
+.fade3,
+.fade4,
+.fade5,
+.fade6,
+.fade7{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:fadeUp 1s forwards;
+
+}
+
+/* Delays */
+
+.fade1{animation-delay:.5s;}
+.fade2{animation-delay:1.2s;}
+.fade3{animation-delay:1.8s;}
+.fade4{animation-delay:2.2s;}
+.fade5{animation-delay:2.8s;}
+.fade6{animation-delay:3.4s;}
+.fade7{animation-delay:4s;}
+
+
+/* Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================
+Wedding Details
+==========================*/
+
+.details{
+
+    background:#f7f4ef;
+
+    color:#222;
+
+    padding:100px 20px;
+
+}
+
+.details h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    color:#0b3d2e;
+
+    margin-bottom:60px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+}
+.card{
+
+    width:100%;
+    max-width:500px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card h3{
+
+    color:#0b3d2e;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+.card p{
+
+    margin:8px;
+
+    font-size:18px;
+
+}
+
+/*============================
+Quran Verse
+=============================*/
+
+.verse{
+
+    background:#0b3d2e;
+
+    color:white;
+
+    text-align:center;
+
+    padding:120px 40px;
+
+}
+
+.verse h2{
+
+    font-size:70px;
+
+    color:#FFD700;
+
+    margin-bottom:40px;
+
+}
+
+.verse h3{
+
+    font-family:'Amiri',serif;
+
+    font-size:42px;
+
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:2;
+
+}
+
+.translation{
+
+    max-width:900px;
+
+    margin:50px auto;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#eeeeee;
+
+}
+
+.reference{
+
+    color:#FFD700;
+
+    font-size:20px;
+
+    letter-spacing:2px;
+
+}
+
+/*==========================
+Countdown
+==========================*/
+
+.countdown{
+
+    background:#f8f5ef;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.countdown h2{
+
+    font-size:48px;
+
+    color:#0b3d2e;
+
+    margin-bottom:60px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.box{
+
+    width:150px;
+
+    height:150px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.box span{
+
+    font-size:52px;
+
+    color:#0b3d2e;
+
+    font-weight:bold;
+
+}
+
+.box p{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    color:#666;
+
+}
+/*==========================
+Venue
+==========================*/
+
+.venue{
+
+    background:#f8f5ef;
+
+    padding:120px 20px;
+
+}
+
+.venue h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    color:#0b3d2e;
+
+    margin-bottom:60px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.venue-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    margin-bottom:60px;
+
+}
+.venue-image{
+
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+}
+.venue-card{
+
+    width:100%;
+    max-width:600px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    text-align:center;
+
+}
+
+.venue-card h3{
+
+    margin-bottom:20px;
+
+    color:#0b3d2e;
+
+}
+
+.venue-card p{
+
+    margin:12px 0;
+
+}
+
+.venue-card button{
+
+    margin-top:25px;
+
+}
+
+.map{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:60px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+
+}
+/*==========================
+Travel
+==========================*/
+
+.travel{
+
+    background:#0b3d2e;
+
+    color:white;
+
+    padding:120px 20px;
+
+}
+
+.travel h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    margin-bottom:60px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.travel-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.travel-card{
+
+    width:280px;
+
+    background:white;
+
+    color:#222;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+}
+
+.travel-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.travel-card h3{
+
+    color:#0b3d2e;
+
+    margin-bottom:20px;
+
+}
+
+.travel-card p{
+
+    margin:10px 0;
+
+}
+/*==========================
+Explore
+==========================*/
+
+.explore{
+
+    background:#f8f5ef;
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.explore h2{
+
+    font-size:48px;
+
+    color:#0b3d2e;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.explore-text{
+
+    margin:20px auto 60px;
+
+    max-width:700px;
+
+    color:#555;
+
+    font-size:18px;
+
+}
+
+.explore-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.explore-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.explore-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.explore-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.explore-card h3{
+
+    color:#0b3d2e;
+
+    margin:20px 0 10px;
+
+}
+
+.explore-card p{
+
+    padding:0 20px 20px;
+
+    color:#666;
+
+}
+
+.explore-card button{
+
+    margin-bottom:25px;
+
+}
+/*==========================
+Gallery
+==========================*/
+
+.gallery{
+
+    background:#f8f5ef;
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.gallery h2{
+
+    color:#0b3d2e;
+
+    font-size:48px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.gallery-text{
+
+    max-width:700px;
+
+    margin:25px auto 60px;
+
+    color:#666;
+
+}
+
+.gallery-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:35px;
+
+    max-width:1100px;
+
+    margin:60px auto;
+
+    flex-wrap:wrap;
+
+}
+
+.gallery-img{
+
+    width:300px;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    transition:.4s;
+
+}
+
+.gallery-img:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+}
+
+.img2{
+
+    margin-top:100px;
+
+}
+/*==========================
+Footer
+==========================*/
+
+.footer{
+
+    background:#081f18;
+
+    color:white;
+
+    text-align:center;
+
+    padding:100px 20px;
+
+}
+
+.footer h2{
+
+    color:#FFD700;
+
+    font-size:48px;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:30px;
+
+}
+
+.footer-message{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+.dua{
+
+    margin-top:60px;
+
+}
+
+.arabic{
+
+    font-family:'Amiri',serif;
+
+    font-size:36px;
+
+    color:#FFD700;
+
+    margin:25px auto;
+
+    line-height:2;
+
+}
+
+.contact{
+
+    margin-top:60px;
+
+}
+
+.contact p{
+
+    margin:12px;
+
+}
+
+.copyright{
+
+    margin-top:60px;
+
+    color:#cccccc;
+
+    font-size:15px;
+
+}
+
+/* Gold Petals */
+
+
+#petals{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:9999;
+}
+
+
+.confetti{
+
+    position:absolute;
+
+    top:-20px;
+
+    width:8px;
+
+    height:20px;
+
+    background:#FFD700;
+
+    opacity:0.3;
+
+    border-radius:3px;
+
+    animation:fall linear forwards;
+
+}
+
+
+@keyframes fall{
+
+    from{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+
+}
+
+    .hero{
+        padding:60px 25px;
+    }
+
+    .names{
+        letter-spacing:1px;
+    }
+
+    .timer{
+        gap:15px;
+    }
+
+    .box{
+        width:110px;
+        height:110px;
+    }
+
+    .box span{
+        font-size:38px;
+    }
+
+    .details h2,
+    .timeline h2,
+    .venue h2,
+    .travel h2,
+    .explore h2,
+    .food h2,
+    .restaurants h2,
+    .gallery h2,
+    .rsvp h2,
+    .footer h2,
+    .countdown h2{
+        font-size:34px;
+    }
+
+    .map iframe{
+        width:100%;
+        height:300px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .gallery-grid{
+        
+        display:flex;
+
+        flex-direction:row;
+
+        justify-content:center;
+
+        align-items:flex-start;
+
+        gap:5px;
+
+        flex-wrap:nowrap;
+        width:100%;
+   
+        max-width:100%;
+
+
+    }
+
+    .gallery-img{
+
+        width:32%;
+
+        height:220px;
+        object-fit:cover;
+
+        border-radius:15px;
+
+    }
+
+    .img2{
+
+        margin-top:40px;
+
+    }
+
+
+
+}
